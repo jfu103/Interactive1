@@ -23,6 +23,10 @@
 			padding:20px;
 		}
 		
+		span:hover {
+			color:black;
+			border-bottom: 10px dashed;
+		}
 		
 		.legible {
 			width:100vw;
@@ -54,7 +58,7 @@
 		.animate-flicker {
 			animation: fadeIn 1s infinite alternate;
 			animation-duration: 3s;
-			opacity: 1;
+			opacity: .5;
 			letter-spacing: -5px;
 			margin-top: 10px;
 			display: inline;
