@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Title</title>
+
+<!--This imports the jquery libary from Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!--Jquery goes here-->
+<script>
+$(document).ready(function(){
+$(".par1").hover(
+  function () {
+    $(this).addClass('greenhover');
+  },
+  function () {
+    $(this).removeClass('greenhover');
+  });
+
+  $(".par3").hover(
+    function () {
+      $(this).addClass('fontsizer');
+    },
+    function () {
+      $(this).removeClass('fontsizer');
+    });
+
+  $(".par2").hover(function(){
+    $(this).css("background-color", "yellow");
+    }, function(){
+    $(this).css("background-color", "pink");
+});
+});
+</script>
+
+<!--Regular CSS Goes here-->
+<style>
+.greenhover {
+  color:green;
+}
+
+.fontsizer {
+font-size:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+  <p class="par1">Some basic text that can now be changes with jquery</p>
+  <p class="par2">Some basic text that can now be changes with jquery</p>
+    <p class="par3">Some basic text that can now be changes with jquery</p>
+
+</body>
+</html>

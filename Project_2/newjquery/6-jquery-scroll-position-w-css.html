@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Title</title>
+
+<!--This imports the jquery libary from Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!--Jquery goes here-->
+<script>
+
+$(document).ready(function() {
+	var s = $("body");
+  var seethru = $(".bigbox");
+	var pos = s.position();
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= pos.top & windowpos <=600) {
+      s.addClass("bg1");
+      s.removeClass("bg2");
+      s.removeClass("bg3");
+      s.removeClass("bg4");
+      s.removeClass("bg5");
+          seethru.removeClass("make-transparent");
+		}
+
+    else if (windowpos >= pos.top & windowpos >=1200 & windowpos <=1799) {
+      s.addClass("bg2");
+      s.removeClass("bg1");
+      s.removeClass("bg3");
+      s.removeClass("bg4");
+      s.removeClass("bg5");
+    seethru.removeClass("make-transparent");
+    }
+
+    else if (windowpos >= pos.top & windowpos >=1800 & windowpos <=2399) {
+      s.addClass("bg3");
+      seethru.addClass("make-transparent");
+      s.removeClass("bg1");
+      s.removeClass("bg2");
+      s.removeClass("bg4");
+      s.removeClass("bg5");
+    }
+
+    else if (windowpos >= pos.top & windowpos >=2400 & windowpos <=2999) {
+      s.addClass("bg4");
+      s.removeClass("bg1");
+      s.removeClass("bg2");
+      s.removeClass("bg3");
+      s.removeClass("bg5");
+          seethru.removeClass("make-transparent");
+    }
+
+    else if (windowpos >= pos.top & windowpos >=3000) {
+      s.addClass("bg5");
+      s.removeClass("bg1");
+      s.removeClass("bg2");
+      s.removeClass("bg3");
+      s.removeClass("bg4");
+          seethru.removeClass("make-transparent");
+    }
+
+    else {
+			s.removeClass("sticka");
+		}
+	});
+});
+
+</script>
+
+
+<style>
+
+.bg1 {
+background-color:white;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+.bg2 {
+background-color:green;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+.bg3 {
+background-color:yellow;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+.bg4 {
+background-color:blue;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+.bg5 {
+background-color:black;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+}
+
+.bigbox {
+  width:200px;
+  height:1200px;
+  float:left;
+    margin-top:20px;
+  margin-left:20px;
+  background-color:grey;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+        border-radius: 0px;
+          opacity:1;
+}
+
+.make-transparent {
+  opacity:.2;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+</style>
+
+</head>
+
+<body>
+  <div id="menu">
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+    <div class="bigbox"></div>
+  </div>
+</body>
+</html>
