@@ -8,7 +8,7 @@ function Asteroid(pos, r, size) {
     pos = createVector(random(width), random(height));
   }
 
-  r = r != null ? r * 0.5 : random(80, 100); //CHANGE SIZE OF BADDIES
+  r = r != null ? r * 0.5 : random(60, 100); //IMPORTANT change size of enemies
   Entity.call(this, pos.x, pos.y, r);
 
   this.vel = p5.Vector.random2D();
